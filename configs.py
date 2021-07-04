@@ -32,9 +32,9 @@ Send me any file I will save it in my Database. Also works for channel. Add me t
 
 🧑🏻‍💻 **Owner:** @Subroz
 
-👥 **Discussion Group:** [Linux Repositories](https://t.me/joinchat/vgbyjAmCqkNhZTJl)
+👥 **Discussion Group:** [MirrorxdClub](https://t.me/joinchat/vgbyjAmCqkNhZTJl)
 
-📢 **Updates Channel:** [Discovery Projects](https://t.me/joinchat/Z672UehwhkA0ODA1)
+📢 **Updates Channel:** [MirrorxdClub](https://t.me/joinchat/Z672UehwhkA0ODA1)
 """
 	ABOUT_DEV_TEXT = f"""
 🧑🏻‍💻 **Owner:** @Subroz
