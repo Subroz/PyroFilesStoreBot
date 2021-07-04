@@ -64,7 +64,7 @@ async def start(bot: Client, cmd: Message):
                 send_stored_file = await bot.forward_messages(chat_id=cmd.from_user.id, from_chat_id=Config.DB_CHANNEL,
                                                               message_ids=file_id)
             await send_stored_file.reply_text(
-                f"**Here is Sharable Link of this file:** https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{file_id}\n\n__To Retrive the Stored File, just open the link!__",
+                f"**Here is Sharable Link of this file:** https://t.me/{Config.BOT_USERNAME}?start=Subroz_{file_id}\n\n__To Retrive the Stored File, just open the link!__",
                 disable_web_page_preview=True, quote=True)
         except Exception as err:
             await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
@@ -87,7 +87,7 @@ async def main(bot: Client, message: Message):
             else:
                 pass
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group](https://t.me/linux_repo)",
+            await message.reply_text("Sorry, You are banned!\n\nContact [Main Group](https://t.me/joinchat/JtfHs9d8npAyOWU1.)",
                                      disable_web_page_preview=True)
             return
         if Config.OTHER_USERS_CAN_SAVE_FILE is False:
@@ -147,7 +147,7 @@ async def main(bot: Client, message: Message):
         try:
             forwarded_msg = await message.forward(Config.DB_CHANNEL)
             file_er_id = forwarded_msg.message_id
-            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{file_er_id}"
+            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=Subroz_{file_er_id}"
             CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.message_id,
                                                           reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
                                                               "Get Sharable Stored Link", url=share_link)]]))
@@ -325,7 +325,7 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/joinchat/Z672UehwhkA0ODA1"),
+                        InlineKeyboardButton("Main Group", url="https://t.me/joinchat/Z672UehwhkA0ODA1"),
                         InlineKeyboardButton("Bot Owner", url="https://t.me/Subroz")
                     ],
                     [
@@ -342,7 +342,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 user = await bot.get_chat_member(int(Config.UPDATES_CHANNEL), cmd.message.chat.id)
                 if user.status == "kicked":
                     await cmd.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/linux_repo).",
+                        text="Sorry Sir, You are Banned to use me. Contact my [Main Group](https://t.me/joinchat/JtfHs9d8npAyOWU1).",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -365,7 +365,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 return
             except Exception:
                 await cmd.message.edit(
-                    text="Something went Wrong. Contact my [Support Group](https://t.me/joinchat/Z672UehwhkA0ODA1).",
+                    text="Something went Wrong. Contact my [Main Group](https://t.me/joinchat/Z672UehwhkA0ODA1).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -377,7 +377,7 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/joinchat/Z672UehwhkA0ODA1"),
+                        InlineKeyboardButton("Main Group", url="https://t.me/joinchat/Z672UehwhkA0ODA1"),
                         InlineKeyboardButton("Bot Owner", url="https://t.me/Subroz")
                     ],
                     [
