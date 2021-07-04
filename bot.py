@@ -46,18 +46,6 @@ async def start(bot: Client, cmd: Message):
             Config.HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id),
             parse_mode="Markdown",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("Support Group", url="https://t.me/linux_repo"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
-                    ],
-                    [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
-                    ]
-                ]
-            )
         )
     else:
         if Config.UPDATES_CHANNEL is not None:
@@ -111,14 +99,14 @@ async def main(bot: Client, message: Message):
             await forwarded_msg.reply_text(
                 f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Got File Link!",
                 parse_mode="Markdown", disable_web_page_preview=True)
-            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{file_er_id}"
+            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=Subroz_{file_er_id}"
             await editable.edit(
                 f"**Your File Stored in my Database!**\n\nHere is the Permanent Link of your file: {share_link} \n\nJust Click the link to get your file!",
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton("Open Link", url=share_link)],
-                     [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates"),
-                      InlineKeyboardButton("Support Group", url="https://t.me/linux_repo")]]
+                     [InlineKeyboardButton("Bots Channel", url="https://t.me/joinchat/Z672UehwhkA0ODA1"),
+                      InlineKeyboardButton("Bot Owner", url="https://t.me/Subroz")]]
                 ),
                 disable_web_page_preview=True
             )
@@ -337,8 +325,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/linux_repo"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
+                        InlineKeyboardButton("Support Group", url="https://t.me/joinchat/Z672UehwhkA0ODA1"),
+                        InlineKeyboardButton("Bot Owner", url="https://t.me/Subroz")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -377,7 +365,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 return
             except Exception:
                 await cmd.message.edit(
-                    text="Something went Wrong. Contact my [Support Group](https://t.me/linux_repo).",
+                    text="Something went Wrong. Contact my [Support Group](https://t.me/joinchat/Z672UehwhkA0ODA1).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -389,8 +377,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/linux_repo"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
+                        InlineKeyboardButton("Support Group", url="https://t.me/joinchat/Z672UehwhkA0ODA1"),
+                        InlineKeyboardButton("Bot Owner", url="https://t.me/Subroz")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
