@@ -87,7 +87,7 @@ async def main(bot: Client, message: Message):
             else:
                 pass
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [Main Group](https://t.me/joinchat/JtfHs9d8npAyOWU1.)",
+            await message.reply_text("Sorry, You are banned!\n\nContact [Owner](https://t.me/Subroz.)",
                                      disable_web_page_preview=True)
             return
         if Config.OTHER_USERS_CAN_SAVE_FILE is False:
@@ -105,7 +105,7 @@ async def main(bot: Client, message: Message):
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton("Open Link", url=share_link)],
-                     [InlineKeyboardButton("Bots Channel", url="https://t.me/joinchat/Z672UehwhkA0ODA1"),
+                     [InlineKeyboardButton("Channel", url="https://t.me/MirrorxdClub"),
                       InlineKeyboardButton("Bot Owner", url="https://t.me/Subroz")]]
                 ),
                 disable_web_page_preview=True
@@ -290,7 +290,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://github.com/AbirHasan2005/PyroFilesStoreBot")
+                                             url="https://github.com/")
                     ],
                     [
                         InlineKeyboardButton("Go Home", callback_data="gotohome"),
@@ -308,7 +308,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://github.com/AbirHasan2005/PyroFilesStoreBot")
+                                             url="https://github.com")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -325,7 +325,7 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Main Group", url="https://t.me/joinchat/Z672UehwhkA0ODA1"),
+                        InlineKeyboardButton("Main Group", url="https://t.me/MirrorxdClub"),
                         InlineKeyboardButton("Bot Owner", url="https://t.me/Subroz")
                     ],
                     [
@@ -342,7 +342,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 user = await bot.get_chat_member(int(Config.UPDATES_CHANNEL), cmd.message.chat.id)
                 if user.status == "kicked":
                     await cmd.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [Main Group](https://t.me/joinchat/JtfHs9d8npAyOWU1).",
+                        text="Sorry Sir, You are Banned to use me. Contact my [Main Group](https://t.me/MirrorxdClub).",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -365,7 +365,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 return
             except Exception:
                 await cmd.message.edit(
-                    text="Something went Wrong. Contact my [Main Group](https://t.me/joinchat/Z672UehwhkA0ODA1).",
+                    text="Something went Wrong. Contact my [Owner](https://t.me/Subroz).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -377,14 +377,10 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Main Group", url="https://t.me/joinchat/Z672UehwhkA0ODA1"),
+                        InlineKeyboardButton("Main Group", url="https://t.me/MirrorxdClub"),
                         InlineKeyboardButton("Bot Owner", url="https://t.me/Subroz")
                     ],
-                    [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
                     ]
-                ]
             )
         )
     elif cb_data.startswith("ban_user_"):

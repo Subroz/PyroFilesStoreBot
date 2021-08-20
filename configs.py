@@ -32,18 +32,17 @@ Send me any file I will save it in my Database. Also works for channel. Add me t
 
 🧑🏻‍💻 **Owner:** @Subroz
 
-👥 **Discussion Group:** [MirrorxdClub](https://t.me/joinchat/vgbyjAmCqkNhZTJl)
+👥 **Discussion Group:** [MirrorxdClub](https://t.me/MirrorxdClub)
 
-📢 **Updates Channel:** [MirrorxdClub](https://t.me/joinchat/Z672UehwhkA0ODA1)
 """
-	ABOUT_DEV_TEXT = f"""
+	ABOUT_OWNER_TEXT = f"""
 🧑🏻‍💻 **Owner:** @Subroz
 
 Developer is Super Noob. Just Learning from Official Docs. Please Donate the developer for Keeping the Service Alive.
 
 Also remember that developer will Delete Adult Contents from Database. So better don't Store Those Kind of Things.
 
-[Donate Now](https://www.paypal.me/Subroxd) (PayPal)
+[Donate Now](https://www.paypal.me/noneed) (PayPal)
 """
 	HOME_TEXT = """
 Hi, [{}](tg://user?id={})\n\nThis is Permanent **File Store Bot**.
